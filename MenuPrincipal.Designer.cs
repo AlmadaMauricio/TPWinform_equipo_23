@@ -53,24 +53,29 @@
             // 
             // btnListar
             // 
+            this.btnListar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnListar.Location = new System.Drawing.Point(124, 159);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(189, 47);
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscar.Location = new System.Drawing.Point(307, 159);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(187, 47);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar por:";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnVerDetalle
             // 
+            this.btnVerDetalle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnVerDetalle.Location = new System.Drawing.Point(487, 159);
             this.btnVerDetalle.Name = "btnVerDetalle";
             this.btnVerDetalle.Size = new System.Drawing.Size(187, 47);
@@ -81,6 +86,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAgregar.Location = new System.Drawing.Point(124, 227);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(189, 47);
@@ -90,6 +96,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnModificar.Location = new System.Drawing.Point(305, 227);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(189, 47);
@@ -99,6 +106,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEliminar.Location = new System.Drawing.Point(487, 227);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(189, 47);
@@ -108,6 +116,7 @@
             // 
             // btnVolverInicio
             // 
+            this.btnVolverInicio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnVolverInicio.Location = new System.Drawing.Point(305, 327);
             this.btnVolverInicio.Name = "btnVolverInicio";
             this.btnVolverInicio.Size = new System.Drawing.Size(189, 47);

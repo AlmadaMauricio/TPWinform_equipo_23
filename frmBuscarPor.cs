@@ -10,23 +10,17 @@ using System.Windows.Forms;
 
 namespace Tp2_Winform
 {
-    public partial class frmInicio : Form
+    public partial class frmBuscarPor : Form
     {
-        public frmInicio()
+        public frmBuscarPor()
         {
             InitializeComponent();
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void lblVolver_Click(object sender, EventArgs e)
         {
             MenuPrincipal ventana = new MenuPrincipal();
             ventana.ShowDialog();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            //cerrar app
-            Close();
         }
     }
 }
