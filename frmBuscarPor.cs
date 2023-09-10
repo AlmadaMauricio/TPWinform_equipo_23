@@ -21,6 +21,9 @@ namespace Tp2_Winform
         {
             MenuPrincipal ventana = new MenuPrincipal();
             ventana.ShowDialog();
+            MenuPrincipal venatanaPrincipal = new MenuPrincipal();
+            venatanaPrincipal.Show();
+            this.Hide();
         }
     }
 }

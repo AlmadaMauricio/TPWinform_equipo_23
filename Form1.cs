@@ -26,7 +26,7 @@ namespace Tp2_Winform
         private void btnSalir_Click(object sender, EventArgs e)
         {
             //cerrar app
-            Close();
+            Application.Exit();
         }
     }
 }
