@@ -19,6 +19,7 @@ namespace Tp2_Winform
 
         private void lblVolver_Click(object sender, EventArgs e)
         {
+            
             MenuPrincipal menuPrincipal = new MenuPrincipal();
             this.Close();
             menuPrincipal.Show();

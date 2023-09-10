@@ -41,5 +41,12 @@ namespace Tp2_Winform
             this.Close();
             ventana.ShowDialog();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregar ventanaAgregar = new frmAgregar();
+            this.Close();
+            ventanaAgregar.Show();
+        }
     }
 }

@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace Tp2_Winform
 {
-    public partial class VerDetalle : Form
+    public partial class frmAgregar : Form
     {
-        public VerDetalle()
+        public frmAgregar()
         {
             InitializeComponent();
         }
 
-        private void btnMenuPrincipal_Click(object sender, EventArgs e)
+        private void btnVolver_Click(object sender, EventArgs e)
         {
-            MenuPrincipal ventana = new MenuPrincipal();
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
             this.Close();
-            ventana.Show();
+            menuPrincipal.Show();
         }
     }
 }
