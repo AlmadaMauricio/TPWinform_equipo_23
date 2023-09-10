@@ -38,6 +38,7 @@ namespace Tp2_Winform
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             frmBuscarPor ventana = new frmBuscarPor();
+            this.Close();
             ventana.ShowDialog();
         }
     }

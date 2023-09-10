@@ -19,11 +19,15 @@ namespace Tp2_Winform
 
         private void lblVolver_Click(object sender, EventArgs e)
         {
-            MenuPrincipal ventana = new MenuPrincipal();
-            ventana.ShowDialog();
-            MenuPrincipal venatanaPrincipal = new MenuPrincipal();
-            venatanaPrincipal.Show();
-            this.Hide();
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            this.Close();
+            menuPrincipal.Show();
+
+        }
+
+        private void frmBuscarPor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
