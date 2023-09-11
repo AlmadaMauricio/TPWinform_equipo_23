@@ -19,9 +19,9 @@ namespace Tp2_Winform
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            MenuPrincipal ventana = new MenuPrincipal();
-            //this.Close();
-            ventana.Show();
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Show();
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

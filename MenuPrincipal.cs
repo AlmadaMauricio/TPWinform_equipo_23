@@ -25,8 +25,9 @@ namespace Tp2_Winform
 
         private void btnVolverInicio_Click(object sender, EventArgs e)
         {
-            frmInicio ventana = new frmInicio();
-            ventana.ShowDialog();
+            frmInicio ventanaInicio = new frmInicio();
+            this.Close();
+            ventanaInicio.Show();
         }
 
         private void btnListar_Click(object sender, EventArgs e)
