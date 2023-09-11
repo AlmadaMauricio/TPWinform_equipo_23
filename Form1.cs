@@ -20,8 +20,9 @@ namespace Tp2_Winform
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             MenuPrincipal menuPrincipal = new MenuPrincipal();
+            //menuPrincipal.MdiParent = this;
             menuPrincipal.Show();
-            
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

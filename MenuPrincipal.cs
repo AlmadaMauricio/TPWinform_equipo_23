@@ -20,7 +20,8 @@ namespace Tp2_Winform
         private void btnVerDetalle_Click(object sender, EventArgs e)
         {
             VerDetalle ventana = new VerDetalle();
-            ventana.ShowDialog();
+            this.Close();
+            ventana.Show();
         }
 
         private void btnVolverInicio_Click(object sender, EventArgs e)
@@ -33,7 +34,8 @@ namespace Tp2_Winform
         private void btnListar_Click(object sender, EventArgs e)
         {
             frmListar ventana = new frmListar();
-            ventana.ShowDialog();
+            this.Close();
+            ventana.Show();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -63,5 +65,6 @@ namespace Tp2_Winform
             this.Close();
             ventanaEliminar.Show();
         }
+
     }
 }
