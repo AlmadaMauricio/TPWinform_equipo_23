@@ -56,7 +56,7 @@
             // 
             this.btnListar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnListar.Location = new System.Drawing.Point(93, 129);
-            this.btnListar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(2);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(142, 38);
             this.btnListar.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscar.Location = new System.Drawing.Point(230, 129);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(140, 38);
             this.btnBuscar.TabIndex = 3;
@@ -80,7 +80,7 @@
             // 
             this.btnVerDetalle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnVerDetalle.Location = new System.Drawing.Point(365, 129);
-            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerDetalle.Name = "btnVerDetalle";
             this.btnVerDetalle.Size = new System.Drawing.Size(140, 38);
             this.btnVerDetalle.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAgregar.Location = new System.Drawing.Point(93, 184);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(142, 38);
             this.btnAgregar.TabIndex = 5;
@@ -104,18 +104,19 @@
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnModificar.Location = new System.Drawing.Point(229, 184);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(142, 38);
             this.btnModificar.TabIndex = 6;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEliminar.Location = new System.Drawing.Point(365, 184);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(142, 38);
             this.btnEliminar.TabIndex = 7;
@@ -126,7 +127,7 @@
             // 
             this.btnVolverInicio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnVolverInicio.Location = new System.Drawing.Point(229, 266);
-            this.btnVolverInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolverInicio.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolverInicio.Name = "btnVolverInicio";
             this.btnVolverInicio.Size = new System.Drawing.Size(142, 38);
             this.btnVolverInicio.TabIndex = 8;
@@ -147,12 +148,13 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.lblGestionArticulos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

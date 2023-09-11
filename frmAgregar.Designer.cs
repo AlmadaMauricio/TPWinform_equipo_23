@@ -44,6 +44,7 @@
             this.pcbImagen = new System.Windows.Forms.PictureBox();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(82, 90);
+            this.lblCodigo.Location = new System.Drawing.Point(82, 112);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(63, 20);
             this.lblCodigo.TabIndex = 0;
@@ -61,7 +62,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(82, 123);
+            this.lblNombre.Location = new System.Drawing.Point(82, 145);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(69, 20);
             this.lblNombre.TabIndex = 1;
@@ -71,7 +72,7 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(82, 155);
+            this.lblCategoria.Location = new System.Drawing.Point(82, 177);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(82, 20);
             this.lblCategoria.TabIndex = 2;
@@ -81,7 +82,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(82, 188);
+            this.lblDescripcion.Location = new System.Drawing.Point(82, 210);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(96, 20);
             this.lblDescripcion.TabIndex = 3;
@@ -91,7 +92,7 @@
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(82, 219);
+            this.lblMarca.Location = new System.Drawing.Point(82, 241);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(57, 20);
             this.lblMarca.TabIndex = 4;
@@ -101,7 +102,7 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(82, 251);
+            this.lblPrecio.Location = new System.Drawing.Point(82, 273);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(57, 20);
             this.lblPrecio.TabIndex = 5;
@@ -109,42 +110,42 @@
             // 
             // txbCodigo
             // 
-            this.txbCodigo.Location = new System.Drawing.Point(220, 90);
+            this.txbCodigo.Location = new System.Drawing.Point(220, 112);
             this.txbCodigo.Name = "txbCodigo";
             this.txbCodigo.Size = new System.Drawing.Size(100, 20);
             this.txbCodigo.TabIndex = 6;
             // 
             // txbNombre
             // 
-            this.txbNombre.Location = new System.Drawing.Point(220, 123);
+            this.txbNombre.Location = new System.Drawing.Point(220, 145);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(100, 20);
             this.txbNombre.TabIndex = 7;
             // 
             // txbCategoria
             // 
-            this.txbCategoria.Location = new System.Drawing.Point(220, 157);
+            this.txbCategoria.Location = new System.Drawing.Point(220, 179);
             this.txbCategoria.Name = "txbCategoria";
             this.txbCategoria.Size = new System.Drawing.Size(100, 20);
             this.txbCategoria.TabIndex = 8;
             // 
             // txbDescripcion
             // 
-            this.txbDescripcion.Location = new System.Drawing.Point(220, 188);
+            this.txbDescripcion.Location = new System.Drawing.Point(220, 210);
             this.txbDescripcion.Name = "txbDescripcion";
             this.txbDescripcion.Size = new System.Drawing.Size(100, 20);
             this.txbDescripcion.TabIndex = 9;
             // 
             // txbMarca
             // 
-            this.txbMarca.Location = new System.Drawing.Point(220, 219);
+            this.txbMarca.Location = new System.Drawing.Point(220, 241);
             this.txbMarca.Name = "txbMarca";
             this.txbMarca.Size = new System.Drawing.Size(100, 20);
             this.txbMarca.TabIndex = 10;
             // 
             // txbPrecio
             // 
-            this.txbPrecio.Location = new System.Drawing.Point(220, 251);
+            this.txbPrecio.Location = new System.Drawing.Point(220, 273);
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(100, 20);
             this.txbPrecio.TabIndex = 11;
@@ -153,7 +154,7 @@
             // 
             this.lblImagen.AutoSize = true;
             this.lblImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagen.Location = new System.Drawing.Point(441, 88);
+            this.lblImagen.Location = new System.Drawing.Point(441, 110);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(67, 20);
             this.lblImagen.TabIndex = 12;
@@ -161,7 +162,7 @@
             // 
             // pcbImagen
             // 
-            this.pcbImagen.Location = new System.Drawing.Point(514, 91);
+            this.pcbImagen.Location = new System.Drawing.Point(514, 113);
             this.pcbImagen.Name = "pcbImagen";
             this.pcbImagen.Size = new System.Drawing.Size(194, 148);
             this.pcbImagen.TabIndex = 13;
@@ -169,7 +170,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(182, 331);
+            this.btnVolver.Location = new System.Drawing.Point(182, 353);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(138, 34);
             this.btnVolver.TabIndex = 14;
@@ -179,18 +180,30 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(422, 331);
+            this.btnAgregar.Location = new System.Drawing.Point(422, 353);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(138, 34);
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(284, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(224, 33);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Agregar Articulo";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.pcbImagen);
@@ -208,7 +221,9 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmAgregar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Agregar";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -233,5 +248,6 @@
         private System.Windows.Forms.PictureBox pcbImagen;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label label1;
     }
 }

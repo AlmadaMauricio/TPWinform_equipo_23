@@ -48,5 +48,12 @@ namespace Tp2_Winform
             this.Close();
             ventanaAgregar.Show();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            frmModificar ventanaModificar = new frmModificar();
+            this.Close();
+            ventanaModificar.Show();
+        }
     }
 }

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Tp2_Winform
 {
-    public partial class frmAgregar : Form
+    public partial class frmModificar : Form
     {
-        public frmAgregar()
+        public frmModificar()
         {
             InitializeComponent();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -22,11 +27,6 @@ namespace Tp2_Winform
             MenuPrincipal menuPrincipal = new MenuPrincipal();
             this.Close();
             menuPrincipal.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
