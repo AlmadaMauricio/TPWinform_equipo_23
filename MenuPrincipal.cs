@@ -56,5 +56,12 @@ namespace Tp2_Winform
             this.Close();
             ventanaModificar.Show();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            frmEliminar ventanaEliminar = new frmEliminar();
+            this.Close();
+            ventanaEliminar.Show();
+        }
     }
 }
