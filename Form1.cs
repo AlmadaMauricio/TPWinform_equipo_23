@@ -17,17 +17,19 @@ namespace Tp2_Winform
             InitializeComponent();
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void frmInicio_Load(object sender, EventArgs e)
         {
-            MenuPrincipal menuPrincipal = new MenuPrincipal();
-            //menuPrincipal.MdiParent = this;
-            menuPrincipal.Show();
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            dgvArticulos.DataSource = articuloNegocio.listar();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            //cerrar app
             Application.Exit();
         }
     }
