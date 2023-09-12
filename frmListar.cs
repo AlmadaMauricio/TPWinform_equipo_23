@@ -16,5 +16,11 @@ namespace Tp2_Winform
         {
             InitializeComponent();
         }
+
+        private void frmListar_Load(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            dgvArticulos.DataSource = negocio.listar();
+        }
     }
 }
