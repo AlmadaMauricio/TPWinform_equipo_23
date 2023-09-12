@@ -14,21 +14,7 @@ namespace Tp2_Winform
     {
         public frmInicio()
         {
-            InitializeComponent();
-        }
-
-        private void btnIngresar_Click(object sender, EventArgs e)
-        {
-            //MenuPrincipal menuPrincipal = new MenuPrincipal();
-            //menuPrincipal.MdiParent = this;
-            //menuPrincipal.Show();
-
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            //cerrar app
-            Application.Exit();
+            InitializeComponent(GetV());
         }
 
         private void frmInicio_Load(object sender, EventArgs e)
