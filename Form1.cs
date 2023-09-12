@@ -19,9 +19,9 @@ namespace Tp2_Winform
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            //MenuPrincipal menuPrincipal = new MenuPrincipal();
             //menuPrincipal.MdiParent = this;
-            menuPrincipal.Show();
+            //menuPrincipal.Show();
 
         }
 
@@ -29,6 +29,11 @@ namespace Tp2_Winform
         {
             //cerrar app
             Application.Exit();
+        }
+
+        private void frmInicio_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
