@@ -10,25 +10,25 @@ using System.Windows.Forms;
 
 namespace Tp2_Winform
 {
-    public partial class frmInicio : Form
+    public partial class frmBuscarPor : Form
     {
-        public frmInicio()
+        public frmBuscarPor()
         {
             InitializeComponent();
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void lblVolver_Click(object sender, EventArgs e)
         {
+            
             MenuPrincipal menuPrincipal = new MenuPrincipal();
-            //menuPrincipal.MdiParent = this;
+            this.Close();
             menuPrincipal.Show();
 
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void frmBuscarPor_Load(object sender, EventArgs e)
         {
-            //cerrar app
-            Application.Exit();
+
         }
     }
 }

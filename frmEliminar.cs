@@ -10,25 +10,18 @@ using System.Windows.Forms;
 
 namespace Tp2_Winform
 {
-    public partial class frmInicio : Form
+    public partial class frmEliminar : Form
     {
-        public frmInicio()
+        public frmEliminar()
         {
             InitializeComponent();
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void btnVolver_Click(object sender, EventArgs e)
         {
             MenuPrincipal menuPrincipal = new MenuPrincipal();
-            //menuPrincipal.MdiParent = this;
+            this.Close();
             menuPrincipal.Show();
-
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            //cerrar app
-            Application.Exit();
         }
     }
 }
