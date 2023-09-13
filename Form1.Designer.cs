@@ -36,6 +36,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,17 +45,17 @@
             // 
             this.dgvArticulos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(12, 24);
+            this.dgvArticulos.Location = new System.Drawing.Point(12, 12);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersWidth = 51;
-            this.dgvArticulos.Size = new System.Drawing.Size(650, 222);
+            this.dgvArticulos.Size = new System.Drawing.Size(815, 234);
             this.dgvArticulos.TabIndex = 0;
-            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // btnLitstar
             // 
             this.btnLitstar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLitstar.Location = new System.Drawing.Point(33, 295);
+            this.btnLitstar.Location = new System.Drawing.Point(139, 295);
             this.btnLitstar.Name = "btnLitstar";
             this.btnLitstar.Size = new System.Drawing.Size(104, 32);
             this.btnLitstar.TabIndex = 1;
@@ -64,7 +65,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(685, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(882, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(242, 222);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -74,7 +75,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAgregar.Location = new System.Drawing.Point(167, 295);
+            this.btnAgregar.Location = new System.Drawing.Point(273, 295);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(104, 32);
             this.btnAgregar.TabIndex = 3;
@@ -84,7 +85,7 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnModificar.Location = new System.Drawing.Point(300, 295);
+            this.btnModificar.Location = new System.Drawing.Point(406, 295);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(104, 32);
             this.btnModificar.TabIndex = 4;
@@ -94,7 +95,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEliminar.Location = new System.Drawing.Point(435, 295);
+            this.btnEliminar.Location = new System.Drawing.Point(541, 295);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(104, 32);
             this.btnEliminar.TabIndex = 5;
@@ -106,9 +107,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 361);
+            this.label1.Location = new System.Drawing.Point(134, 361);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 31);
+            this.label1.Size = new System.Drawing.Size(122, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Buscar por:";
             // 
@@ -120,15 +121,26 @@
             "Codigo Artciulo",
             "Nombre",
             "Marca"});
-            this.comboBox1.Location = new System.Drawing.Point(167, 367);
+            this.comboBox1.Location = new System.Drawing.Point(273, 367);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 7;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnExit.Location = new System.Drawing.Point(811, 360);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(104, 32);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "Salir";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmInicio
             // 
-            this.ClientSize = new System.Drawing.Size(939, 466);
+            this.ClientSize = new System.Drawing.Size(1150, 594);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEliminar);
@@ -158,6 +170,8 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

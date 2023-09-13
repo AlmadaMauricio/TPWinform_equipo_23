@@ -27,11 +27,10 @@ namespace Tp2_Winform
             //dgvArticulos.Columns["Imagen"].Visible = false;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
             Articulos seleccionado = (Articulos)dgvArticulos.CurrentRow.DataBoundItem;
-            pictureBox1.Load(seleccionado.imagenes.ImagenUrl);
-
+            cargarImagen(seleccionado.imagenes.ImagenUrl);
         }
         private void cargarImagen(string imagen)
         {
@@ -45,7 +44,7 @@ namespace Tp2_Winform
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
