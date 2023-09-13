@@ -41,7 +41,7 @@ namespace Tp2_Winform
                     aux.Categoria.DescripcionCategoria = (string)lector["Categoria"];
                     aux.imagenes = new Imagenes();
                     aux.imagenes.ImagenUrl = (string)lector["Imagen"];
-                    //aux.Precio = (float)lector["Precio"];
+                    aux.Precio = (float)Convert.ToDecimal(lector["Precio"]);
 
                     lista.Add(aux);
                 }
