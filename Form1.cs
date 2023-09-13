@@ -24,7 +24,7 @@ namespace Tp2_Winform
             listaArticulos = articuloNegocio.listar();
             dgvArticulos.DataSource = articuloNegocio.listar();
             pictureBox1.Load(listaArticulos[0].imagenes.ImagenUrl);
-            //dgvArticulos.Columns["Imagen"].Visible = false;
+            dgvArticulos.Columns["Imagenes"].Visible = false;
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
