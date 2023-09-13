@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tp2_Winform
+namespace Dominio
 {
-    internal class Categoria
+    public class Marcas
     {
-        public int IdCategoria { get; set; }
-        public string DescripcionCategoria { get; set; }
+        public int IdMarca { get; set; }
+        public string DescripcionMarca { get; set; }
         public override string ToString()
         {
-            return DescripcionCategoria;
+            return DescripcionMarca;
         }
+
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tp2_Winform
+namespace Dominio
 {
-    internal class Articulos
+    public class Articulos
     {
         public int IdArticulo { get; set; }
         public string CodArticulo { get; set; }

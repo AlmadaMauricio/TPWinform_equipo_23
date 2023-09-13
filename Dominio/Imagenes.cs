@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tp2_Winform
+namespace Dominio
 {
-    internal class Imagenes
+    public class Imagenes
     {
         public int IdImagen { get; set; }
         public int IdArticulo { get; set; }
