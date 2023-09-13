@@ -19,9 +19,9 @@ namespace Tp2_Winform
 
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                conexion.ConnectionString = "server=.\\SQLLab3; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select * from ARTICULOS";
+                comando.CommandText = "SELECT A.Id ID,A.Codigo, A.Nombre, A.Descripcion, M.Descripcion Marca, C.Descripcion Categoria, A.Precio, I.ImagenUrl Imagen from ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id AND A.Id = I.IdArticulo";
 
                 comando.Connection = conexion;
 
@@ -35,6 +35,12 @@ namespace Tp2_Winform
                     aux.CodArticulo = (string)lector["Codigo"];
                     aux.NombreArticulo = (string)lector["Nombre"];
                     aux.DescripcionArticulo = (string)lector["Descripcion"];
+                    aux.Marcas = new Marcas();
+                    aux.Marcas.DescripcionMarca = (string)lector["Marca"];
+                    aux.Categoria = new Categoria();
+                    aux.Categoria.DescripcionCategoria = (string)lector["Categoria"];
+                    aux.imagenes = new Imagenes();
+                    aux.imagenes.ImagenUrl = (string)lector["Imagen"];
                     //aux.Precio = (float)lector["Precio"];
 
                     lista.Add(aux);
