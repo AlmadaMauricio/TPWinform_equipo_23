@@ -1,5 +1,4 @@
-﻿using Dominio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
+using Dominio;
 
 namespace Tp2_Winform
 {
@@ -28,8 +28,9 @@ namespace Tp2_Winform
                 art.CodArticulo = tbxCodigo.Text;
                 art.NombreArticulo = tbxNombre.Text;
                 art.DescripcionArticulo = tbxDescripcion.Text;
-                //art.Marcas.IdMarca = int.Parse(tbxMarca.Text);
-                //art.Categoria.IdCategoria = int.Parse(tbxCategoria.Text);
+                art.Marcas.IdMarca = int.Parse(tbxMarca.Text);
+                art.Categoria.IdCategoria = int.Parse(tbxCategoria.Text);
+                art.Precio = float.Parse(tbxPrecio.Text);
                 //art.imagenes.ImagenUrl = tbxDescripcion.Text;
 
                 negocio.agregar(art);
