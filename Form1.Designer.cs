@@ -43,19 +43,19 @@
             // 
             // dgvArticulos
             // 
-            this.dgvArticulos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(12, 12);
+            this.dgvArticulos.ColumnHeadersHeight = 29;
+            this.dgvArticulos.Location = new System.Drawing.Point(140, 12);
             this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvArticulos.RowHeadersWidth = 51;
-            this.dgvArticulos.Size = new System.Drawing.Size(815, 234);
+            this.dgvArticulos.Size = new System.Drawing.Size(689, 222);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // btnLitstar
             // 
             this.btnLitstar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLitstar.Location = new System.Drawing.Point(139, 295);
+            this.btnLitstar.Location = new System.Drawing.Point(273, 295);
             this.btnLitstar.Name = "btnLitstar";
             this.btnLitstar.Size = new System.Drawing.Size(104, 32);
             this.btnLitstar.TabIndex = 1;
@@ -75,17 +75,18 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAgregar.Location = new System.Drawing.Point(273, 295);
+            this.btnAgregar.Location = new System.Drawing.Point(140, 295);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(104, 32);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnModificar.Location = new System.Drawing.Point(406, 295);
+            this.btnModificar.Location = new System.Drawing.Point(418, 295);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(104, 32);
             this.btnModificar.TabIndex = 4;
@@ -95,7 +96,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEliminar.Location = new System.Drawing.Point(541, 295);
+            this.btnEliminar.Location = new System.Drawing.Point(570, 295);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(104, 32);
             this.btnEliminar.TabIndex = 5;
@@ -109,7 +110,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(134, 361);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 25);
+            this.label1.Size = new System.Drawing.Size(153, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "Buscar por:";
             // 
@@ -123,13 +124,13 @@
             "Marca"});
             this.comboBox1.Location = new System.Drawing.Point(273, 367);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 7;
             // 
             // btnExit
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnExit.Location = new System.Drawing.Point(811, 360);
+            this.btnExit.Location = new System.Drawing.Point(725, 295);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(104, 32);
             this.btnExit.TabIndex = 8;

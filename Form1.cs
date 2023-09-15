@@ -52,5 +52,11 @@ namespace Tp2_Winform
         {
             Application.Exit();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaArticulo altaArticulo = new frmAltaArticulo();
+            altaArticulo.ShowDialog();
+        }
     }
 }

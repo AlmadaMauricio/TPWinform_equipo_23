@@ -52,5 +52,22 @@ namespace Negocio
             }
 
         }
+        public void agregar(Articulos nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("insert into ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) values ("+ nuevo.CodArticulo +", '" + nuevo.NombreArticulo + ", '" + nuevo.DescripcionArticulo + ", '" + nuevo.Marcas.IdMarca + ", '" + nuevo.Categoria.IdCategoria + ", '" + nuevo.Precio + ", '" + nuevo.imagenes.ImagenUrl + ",)");
+                datos.ejecutarAccion();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally 
+            { 
+                datos.cerrarConexion();
+            }
+        }
     }
 }
