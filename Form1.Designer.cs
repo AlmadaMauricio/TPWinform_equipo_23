@@ -44,7 +44,7 @@
             // dgvArticulos
             // 
             this.dgvArticulos.ColumnHeadersHeight = 29;
-            this.dgvArticulos.Location = new System.Drawing.Point(140, 12);
+            this.dgvArticulos.Location = new System.Drawing.Point(12, 12);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvArticulos.RowHeadersWidth = 51;
@@ -55,17 +55,18 @@
             // btnLitstar
             // 
             this.btnLitstar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLitstar.Location = new System.Drawing.Point(273, 295);
+            this.btnLitstar.Location = new System.Drawing.Point(155, 251);
             this.btnLitstar.Name = "btnLitstar";
             this.btnLitstar.Size = new System.Drawing.Size(104, 32);
             this.btnLitstar.TabIndex = 1;
             this.btnLitstar.Text = "Listar";
             this.btnLitstar.UseVisualStyleBackColor = true;
+            this.btnLitstar.Click += new System.EventHandler(this.btnLitstar_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(882, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(735, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(242, 222);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -75,7 +76,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAgregar.Location = new System.Drawing.Point(140, 295);
+            this.btnAgregar.Location = new System.Drawing.Point(22, 251);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(104, 32);
             this.btnAgregar.TabIndex = 3;
@@ -86,17 +87,18 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnModificar.Location = new System.Drawing.Point(418, 295);
+            this.btnModificar.Location = new System.Drawing.Point(300, 251);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(104, 32);
             this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEliminar.Location = new System.Drawing.Point(570, 295);
+            this.btnEliminar.Location = new System.Drawing.Point(452, 251);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(104, 32);
             this.btnEliminar.TabIndex = 5;
@@ -108,9 +110,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(134, 361);
+            this.label1.Location = new System.Drawing.Point(16, 305);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 31);
+            this.label1.Size = new System.Drawing.Size(122, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Buscar por:";
             // 
@@ -122,15 +124,15 @@
             "Codigo Artciulo",
             "Nombre",
             "Marca"});
-            this.comboBox1.Location = new System.Drawing.Point(273, 367);
+            this.comboBox1.Location = new System.Drawing.Point(155, 311);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 7;
             // 
             // btnExit
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnExit.Location = new System.Drawing.Point(725, 295);
+            this.btnExit.Location = new System.Drawing.Point(607, 251);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(104, 32);
             this.btnExit.TabIndex = 8;
@@ -140,7 +142,7 @@
             // 
             // frmInicio
             // 
-            this.ClientSize = new System.Drawing.Size(1150, 594);
+            this.ClientSize = new System.Drawing.Size(1170, 418);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);

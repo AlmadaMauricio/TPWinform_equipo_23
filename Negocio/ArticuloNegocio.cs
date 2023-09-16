@@ -57,13 +57,14 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                //datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion,IdMarca, IdCategoria, Precio) VALUES (@codArticulo, @nombreArticulo, @descripcionArticulo, @IdMarca, @IdCategoria, @precio)");
-                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio) VALUES (@codArticulo, @nombreArticulo, @descripcionArticulo, @precio)");
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion,IdMarca, IdCategoria, Precio) VALUES (@codArticulo, @nombreArticulo, @descripcionArticulo, @IdMarca, @IdCategoria, @precio)");
+                //datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio) VALUES (@codArticulo, @nombreArticulo, @descripcionArticulo, @precio)");
                 datos.setearParametro("@codArticulo", nuevo.CodArticulo);
                 datos.setearParametro("@nombreArticulo", nuevo.NombreArticulo);
                 datos.setearParametro("@descripcionArticulo", nuevo.DescripcionArticulo);
-                //datos.setearParametro("@IdMarca", nuevo.Marcas.IdMarca);
-                //datos.setearParametro("@IdCategoria", nuevo.Categoria.IdCategoria);
+                datos.setearParametro("@IdMarca", nuevo.Marcas.IdMarca);
+                datos.setearParametro("@IdCategoria", nuevo.Categoria.IdCategoria);
+                //datos.setearParametro("@ImagenUrl", nuevo.imagenes.ImagenUrl);
                 datos.setearParametro("@precio", nuevo.Precio);
                 datos.ejecutarAccion();
             }

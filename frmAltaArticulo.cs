@@ -9,14 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 using Dominio;
+using System.CodeDom;
 
 namespace Tp2_Winform
 {
     public partial class frmAltaArticulo : Form
     {
+        private Articulos articulo = null;
         public frmAltaArticulo()
         {
             InitializeComponent();
+        }
+        public frmAltaArticulo(Articulos articulos)
+        {
+            InitializeComponent();
+            this.articulo = articulos;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -28,10 +35,13 @@ namespace Tp2_Winform
                 art.CodArticulo = tbxCodigo.Text;
                 art.NombreArticulo = tbxNombre.Text;
                 art.DescripcionArticulo = tbxDescripcion.Text;
-                //art.Marcas.IdMarca = int.Parse(tbxMarca.Text);
-                //art.Categoria.IdCategoria = int.Parse(tbxCategoria.Text);
+                art.Marcas = new Marcas();
+                art.Marcas.IdMarca = int.Parse(tbxMarca.Text);
+                art.Categoria = new Categoria();
+                art.Categoria.IdCategoria = int.Parse(tbxCategoria.Text);
                 art.Precio = float.Parse(tbxPrecio.Text);
-                //art.imagenes.ImagenUrl = tbxDescripcion.Text;
+                art.imagenes = new Imagenes();
+                art.imagenes.ImagenUrl = tbxDescripcion.Text;
 
                 negocio.agregar(art);
                 MessageBox.Show("Agregado Exitosamente!!");
@@ -52,7 +62,16 @@ namespace Tp2_Winform
 
         private void frmAltaArticulo_Load(object sender, EventArgs e)
         {
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
