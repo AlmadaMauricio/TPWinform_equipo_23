@@ -13,13 +13,13 @@ namespace Negocio
     {
         public List<Articulos> listar()
         {
-			List<Articulos> lista = new List<Articulos>();
-			AccesoDatos datos = new AccesoDatos();
+            List<Articulos> lista = new List<Articulos>();
+            AccesoDatos datos = new AccesoDatos();
 
-			try
-			{
-				datos.setearConsulta("SELECT A.Id ID,A.Codigo, A.Nombre, A.Descripcion, M.Descripcion Marca, C.Descripcion Categoria, A.Precio, I.ImagenUrl Imagen from ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id AND A.Id = I.IdArticulo");
-				datos.ejecutarLectura();
+            try
+            {
+                datos.setearConsulta("SELECT A.Id ID,A.Codigo, A.Nombre, A.Descripcion, M.Descripcion Marca, C.Descripcion Categoria, A.Precio, I.ImagenUrl Imagen from ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id AND A.Id = I.IdArticulo");
+                datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
@@ -40,12 +40,12 @@ namespace Negocio
                 }
 
                 return lista;
-			}
-			catch (Exception ex)
-			{
+            }
+            catch (Exception ex)
+            {
 
-				throw ex;
-			}
+                throw ex;
+            }
             finally
             {
                 datos.cerrarConexion();
@@ -57,7 +57,14 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES (" + nuevo.CodArticulo + ", '" + nuevo.NombreArticulo + "', '" + nuevo.DescripcionArticulo + "', " + nuevo.Marcas.IdMarca + ", " + nuevo.Categoria.IdCategoria + ", " + nuevo.Precio + ")");
+                //datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion,IdMarca, IdCategoria, Precio) VALUES (@codArticulo, @nombreArticulo, @descripcionArticulo, @IdMarca, @IdCategoria, @precio)");
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio) VALUES (@codArticulo, @nombreArticulo, @descripcionArticulo, @precio)");
+                datos.setearParametro("@codArticulo", nuevo.CodArticulo);
+                datos.setearParametro("@nombreArticulo", nuevo.NombreArticulo);
+                datos.setearParametro("@descripcionArticulo", nuevo.DescripcionArticulo);
+                //datos.setearParametro("@IdMarca", nuevo.Marcas.IdMarca);
+                //datos.setearParametro("@IdCategoria", nuevo.Categoria.IdCategoria);
+                datos.setearParametro("@precio", nuevo.Precio);
                 datos.ejecutarAccion();
             }
             catch(Exception ex)

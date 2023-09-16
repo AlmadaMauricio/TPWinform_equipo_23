@@ -37,13 +37,13 @@
             this.tbxCodigo = new System.Windows.Forms.TextBox();
             this.tbxNombre = new System.Windows.Forms.TextBox();
             this.tbxDescripcion = new System.Windows.Forms.TextBox();
-            this.tbxMarca = new System.Windows.Forms.TextBox();
-            this.tbxCategoria = new System.Windows.Forms.TextBox();
             this.tbxPrecio = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.tbxUrl = new System.Windows.Forms.TextBox();
             this.lblimagen = new System.Windows.Forms.Label();
+            this.tbxCategoria = new System.Windows.Forms.TextBox();
+            this.tbxMarca = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblcod
@@ -121,20 +121,6 @@
             this.tbxDescripcion.Size = new System.Drawing.Size(212, 22);
             this.tbxDescripcion.TabIndex = 10;
             // 
-            // tbxMarca
-            // 
-            this.tbxMarca.Location = new System.Drawing.Point(330, 157);
-            this.tbxMarca.Name = "tbxMarca";
-            this.tbxMarca.Size = new System.Drawing.Size(212, 22);
-            this.tbxMarca.TabIndex = 11;
-            // 
-            // tbxCategoria
-            // 
-            this.tbxCategoria.Location = new System.Drawing.Point(330, 204);
-            this.tbxCategoria.Name = "tbxCategoria";
-            this.tbxCategoria.Size = new System.Drawing.Size(212, 22);
-            this.tbxCategoria.TabIndex = 12;
-            // 
             // tbxPrecio
             // 
             this.tbxPrecio.Location = new System.Drawing.Point(330, 246);
@@ -178,6 +164,20 @@
             this.lblimagen.TabIndex = 16;
             this.lblimagen.Text = "URL Imagen:";
             // 
+            // tbxCategoria
+            // 
+            this.tbxCategoria.Location = new System.Drawing.Point(330, 204);
+            this.tbxCategoria.Name = "tbxCategoria";
+            this.tbxCategoria.Size = new System.Drawing.Size(212, 22);
+            this.tbxCategoria.TabIndex = 12;
+            // 
+            // tbxMarca
+            // 
+            this.tbxMarca.Location = new System.Drawing.Point(330, 157);
+            this.tbxMarca.Name = "tbxMarca";
+            this.tbxMarca.Size = new System.Drawing.Size(212, 22);
+            this.tbxMarca.TabIndex = 11;
+            // 
             // frmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -217,12 +217,12 @@
         private System.Windows.Forms.TextBox tbxCodigo;
         private System.Windows.Forms.TextBox tbxNombre;
         private System.Windows.Forms.TextBox tbxDescripcion;
-        private System.Windows.Forms.TextBox tbxMarca;
-        private System.Windows.Forms.TextBox tbxCategoria;
         private System.Windows.Forms.TextBox tbxPrecio;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox tbxUrl;
         private System.Windows.Forms.Label lblimagen;
+        private System.Windows.Forms.TextBox tbxCategoria;
+        private System.Windows.Forms.TextBox tbxMarca;
     }
 }

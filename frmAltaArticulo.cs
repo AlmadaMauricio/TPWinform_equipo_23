@@ -21,15 +21,15 @@ namespace Tp2_Winform
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Articulos art = new Articulos(); 
+            Articulos art = new Articulos();
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
                 art.CodArticulo = tbxCodigo.Text;
                 art.NombreArticulo = tbxNombre.Text;
                 art.DescripcionArticulo = tbxDescripcion.Text;
-                art.Marcas.IdMarca = int.Parse(tbxMarca.Text);
-                art.Categoria.IdCategoria = int.Parse(tbxCategoria.Text);
+                //art.Marcas.IdMarca = int.Parse(tbxMarca.Text);
+                //art.Categoria.IdCategoria = int.Parse(tbxCategoria.Text);
                 art.Precio = float.Parse(tbxPrecio.Text);
                 //art.imagenes.ImagenUrl = tbxDescripcion.Text;
 
@@ -48,6 +48,11 @@ namespace Tp2_Winform
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void frmAltaArticulo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
