@@ -23,6 +23,11 @@ namespace Tp2_Winform
 
         private void frmInicio_Load(object sender, EventArgs e)
         {
+            cargar();
+        }
+
+        private void cargar()
+        {
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             listaArticulos = articuloNegocio.listar();
             dgvArticulos.DataSource = articuloNegocio.listar();
@@ -59,6 +64,7 @@ namespace Tp2_Winform
         {
             frmAltaArticulo altaArticulo = new frmAltaArticulo();
             altaArticulo.ShowDialog();
+            cargar();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
