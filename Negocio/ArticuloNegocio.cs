@@ -18,7 +18,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("SELECT A.Id ID,A.Codigo, A.Nombre, A.Descripcion, M.Descripcion Marca, C.Descripcion Categoria, A.Precio, I.ImagenUrl Imagen from ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id AND A.Id = I.IdArticulo");
+                datos.setearConsulta("SELECT A.Id ID,A.Codigo, A.Nombre, A.Descripcion, A.IdMarca IdMarca, M.Descripcion Marca, A.IdCategoria, C.Descripcion Categoria, A.Precio, I.ImagenUrl Imagen from ARTICULOS A left join MARCAS M on A.IdMarca = M.Id left join CATEGORIAS C ON C.Id = A.IdCategoria left join IMAGENES I ON I.IdArticulo = A.Id");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -28,12 +28,17 @@ namespace Negocio
                     aux.CodArticulo = (string)datos.Lector["Codigo"];
                     aux.NombreArticulo = (string)datos.Lector["Nombre"];
                     aux.DescripcionArticulo = (string)datos.Lector["Descripcion"];
+                    aux.IdMarca = (int)datos.Lector["IdMarca"];
                     aux.Marcas = new Marcas();
                     aux.Marcas.DescripcionMarca = (string)datos.Lector["Marca"];
+                    aux.IdCategoria = (int)datos.Lector["IdCategoria"];
                     aux.Categoria = new Categoria();
                     aux.Categoria.DescripcionCategoria = (string)datos.Lector["Categoria"];
                     aux.imagenes = new Imagenes();
+                    if (!(datos.Lector.IsDBNull(datos.Lector.GetOrdinal("Imagen"))))
+                    {
                     aux.imagenes.ImagenUrl = (string)datos.Lector["Imagen"];
+                    }
                     aux.Precio = (float)Convert.ToDecimal(datos.Lector["Precio"]);
 
                     lista.Add(aux);
@@ -62,8 +67,8 @@ namespace Negocio
                 datos.setearParametro("@codArticulo", nuevo.CodArticulo);
                 datos.setearParametro("@nombreArticulo", nuevo.NombreArticulo);
                 datos.setearParametro("@descripcionArticulo", nuevo.DescripcionArticulo);
-                datos.setearParametro("@IdMarca", nuevo.Marcas.IdMarca);
-                datos.setearParametro("@IdCategoria", nuevo.Categoria.IdCategoria);
+                datos.setearParametro("@IdMarca", nuevo.IdMarca);
+                datos.setearParametro("@IdCategoria", nuevo.IdCategoria);
                 //datos.setearParametro("@ImagenUrl", nuevo.imagenes.ImagenUrl);
                 datos.setearParametro("@precio", nuevo.Precio);
                 datos.ejecutarAccion();

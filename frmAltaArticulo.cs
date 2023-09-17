@@ -35,10 +35,8 @@ namespace Tp2_Winform
                 art.CodArticulo = tbxCodigo.Text;
                 art.NombreArticulo = tbxNombre.Text;
                 art.DescripcionArticulo = tbxDescripcion.Text;
-                art.Marcas = new Marcas();
-                art.Marcas.IdMarca = int.Parse(tbxMarca.Text);
-                art.Categoria = new Categoria();
-                art.Categoria.IdCategoria = int.Parse(tbxCategoria.Text);
+                art.IdMarca = int.Parse(tbxMarca.Text);
+                art.IdCategoria = int.Parse(tbxCategoria.Text);
                 art.Precio = float.Parse(tbxPrecio.Text);
                 art.imagenes = new Imagenes();
                 art.imagenes.ImagenUrl = tbxDescripcion.Text;
