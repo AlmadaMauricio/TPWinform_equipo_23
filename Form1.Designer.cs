@@ -46,22 +46,22 @@
             this.dgvArticulos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvArticulos.ColumnHeadersHeight = 29;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvArticulos.Location = new System.Drawing.Point(134, 107);
+            this.dgvArticulos.Location = new System.Drawing.Point(26, 107);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvArticulos.RowHeadersWidth = 51;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulos.Size = new System.Drawing.Size(722, 222);
+            this.dgvArticulos.Size = new System.Drawing.Size(676, 202);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(756, 107);
+            this.pictureBox1.Location = new System.Drawing.Point(723, 107);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(242, 222);
+            this.pictureBox1.Size = new System.Drawing.Size(220, 202);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -105,7 +105,7 @@
             this.lblFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltro.Location = new System.Drawing.Point(168, 44);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(75, 31);
+            this.lblFiltro.Size = new System.Drawing.Size(60, 25);
             this.lblFiltro.TabIndex = 6;
             this.lblFiltro.Text = "Filtro";
             // 
@@ -125,7 +125,7 @@
             this.txtFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtFiltro.Location = new System.Drawing.Point(280, 44);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(149, 22);
+            this.txtFiltro.Size = new System.Drawing.Size(149, 20);
             this.txtFiltro.TabIndex = 9;
             // 
             // btnBuscar
@@ -141,7 +141,7 @@
             // 
             // frmInicio
             // 
-            this.ClientSize = new System.Drawing.Size(953, 392);
+            this.ClientSize = new System.Drawing.Size(955, 400);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.btnExit);

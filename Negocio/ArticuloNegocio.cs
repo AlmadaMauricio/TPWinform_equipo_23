@@ -37,7 +37,7 @@ namespace Negocio
                     aux.imagenes = new Imagenes();
                     if (!(datos.Lector.IsDBNull(datos.Lector.GetOrdinal("Imagen"))))
                     {
-                    aux.imagenes.ImagenUrl = (string)datos.Lector["Imagen"];
+                        aux.imagenes.ImagenUrl = (string)datos.Lector["Imagen"];
                     }
                     aux.Precio = (float)Convert.ToDecimal(datos.Lector["Precio"]);
 
