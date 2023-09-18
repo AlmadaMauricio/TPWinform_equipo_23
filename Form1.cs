@@ -105,5 +105,27 @@ namespace Tp2_Winform
             dgvArticulos.DataSource = listaFiltrada;
             ocultarColumnas();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio articulo = new ArticuloNegocio();
+            Articulos seleccionado = new Articulos();
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Elimar definitivamente?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulos)dgvArticulos.CurrentRow.DataBoundItem;
+                    articulo.eliminar(seleccionado.IdArticulo);
+                    cargar();
+                }
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

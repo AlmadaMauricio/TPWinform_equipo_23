@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Dominio;
-
+using System.Runtime.InteropServices;
 
 namespace Negocio
 {
@@ -82,5 +82,22 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+
+        public void eliminar(int IdArticulo)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("Delete From Articulos Where id = @IdArticulo");
+                datos.setearParametro("@IdArticulo", IdArticulo);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        
     }
 }
