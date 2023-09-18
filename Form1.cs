@@ -135,7 +135,7 @@ namespace Tp2_Winform
 
             if (filtro.Length >= 3)
             {
-                listaFiltrada = listaArticulos.FindAll(x => x.NombreArticulo.ToUpper().Contains(filtro.ToUpper()) || x.DescripcionArticulo.ToUpper().Contains(filtro.ToUpper()));
+                listaFiltrada = listaArticulos.FindAll(x => x.NombreArticulo.ToUpper().Contains(filtro.ToUpper()) || x.DescripcionArticulo.ToUpper().Contains(filtro.ToUpper()) || x.Marcas.DescripcionMarca.ToUpper().Contains(filtro.ToUpper()) || x.Categoria.DescripcionCategoria.ToUpper().Contains(filtro.ToUpper()));
             }
             else
             {
