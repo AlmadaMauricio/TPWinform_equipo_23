@@ -36,7 +36,6 @@
             this.lblFiltro = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +103,7 @@
             this.lblFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFiltro.AutoSize = true;
             this.lblFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltro.Location = new System.Drawing.Point(168, 44);
+            this.lblFiltro.Location = new System.Drawing.Point(23, 62);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(60, 25);
             this.lblFiltro.TabIndex = 6;
@@ -124,26 +123,15 @@
             // txtFiltro
             // 
             this.txtFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtFiltro.Location = new System.Drawing.Point(280, 44);
+            this.txtFiltro.Location = new System.Drawing.Point(89, 68);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(149, 20);
             this.txtFiltro.TabIndex = 9;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBuscar.Location = new System.Drawing.Point(496, 39);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(104, 32);
-            this.btnBuscar.TabIndex = 10;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
             // frmInicio
             // 
             this.ClientSize = new System.Drawing.Size(955, 400);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblFiltro);
@@ -176,7 +164,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtFiltro;
-        private System.Windows.Forms.Button btnBuscar;
     }
 }
 

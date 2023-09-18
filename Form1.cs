@@ -127,5 +127,23 @@ namespace Tp2_Winform
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulos> listaFiltrada;
+            string filtro = txtFiltro.Text;
+
+            if (filtro.Length >= 3)
+            {
+                listaFiltrada = listaArticulos.FindAll(x => x.NombreArticulo.ToUpper().Contains(filtro.ToUpper()) || x.DescripcionArticulo.ToUpper().Contains(filtro.ToUpper()));
+            }
+            else
+            {
+                listaFiltrada = listaArticulos;
+            }
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+            ocultarColumnas();
+        }
     }
 }
