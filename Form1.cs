@@ -32,6 +32,11 @@ namespace Tp2_Winform
             listaArticulos = articuloNegocio.listar();
             dgvArticulos.DataSource = articuloNegocio.listar();
             pictureBox1.Load(listaArticulos[0].imagenes.ImagenUrl);
+            ocultarColumnas();
+        }
+
+        private void ocultarColumnas()
+        {
             dgvArticulos.Columns["IdArticulo"].Visible = false;
             dgvArticulos.Columns["IdMarca"].Visible = false;
             dgvArticulos.Columns["IdCategoria"].Visible = false;
@@ -40,8 +45,11 @@ namespace Tp2_Winform
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulos seleccionado = (Articulos)dgvArticulos.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.imagenes.ImagenUrl);
+            if(dgvArticulos.CurrentRow != null)
+            {
+                Articulos seleccionado = (Articulos)dgvArticulos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.imagenes.ImagenUrl);
+            }
         }
         private void cargarImagen(string imagen)
         {
@@ -78,6 +86,24 @@ namespace Tp2_Winform
         private void btnLitstar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            List<Articulos> listaFiltrada;
+            string filtro = txtFiltro.Text;
+
+            if (filtro != "")
+            {
+                listaFiltrada = listaArticulos.FindAll(x => x.CodArticulo.ToUpper().Contains(txtFiltro.Text.ToUpper()) || x.NombreArticulo.ToUpper().Contains(txtFiltro.Text.ToUpper()) || x.DescripcionArticulo.ToUpper().Contains(txtFiltro.Text.ToUpper()) || x.Marcas.DescripcionMarca.ToUpper().Contains(txtFiltro.Text.ToUpper()) || x.Categoria.DescripcionCategoria.ToUpper().Contains(txtFiltro.Text.ToUpper()));
+            }
+            else
+            {
+                listaFiltrada = listaArticulos;
+            }
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+            ocultarColumnas();
         }
     }
 }
